@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"log"
+	//"log"
 )
 
 func create_file(filename string) {
@@ -12,9 +12,10 @@ func create_file(filename string) {
 
 	if err != nil {
 		fmt.Println("Error occured :", err)
-		fmt.Errorf(err)
-		log.Fatalf(err)
+		//fmt.Errorf(err)
+		//log.Fatalf(err)
 	}
+	
 }
 
 func main() {
