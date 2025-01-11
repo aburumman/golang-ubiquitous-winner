@@ -13,3 +13,9 @@ func main() {
 	greetings("Patrick")
 	go greetings("Moremi ")
 }
+
+//comm := make(chan string)
+
+// go func() {
+
+// }
