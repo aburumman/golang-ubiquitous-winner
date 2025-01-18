@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	//"sort"
 )
 
 
 func main() {
 	// sum mean median
-	myList := []float64{10, 1, 2, 3}
+	myList := []float64{10, 1, 2, 3,9}
  fmt.Println(sum(myList))
  fmt.Println(mean(myList))
+ fmt.Println(median(myList))
 
 }
 
