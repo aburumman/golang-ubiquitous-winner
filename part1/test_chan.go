@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	//"sync"
 )
 
 func main() {
@@ -15,5 +16,5 @@ func main() {
 	go func () { 
 		fmt.Printf(next_name) 
 	} ()
-	fmt.Println(my_name, data_chan, )
+	go fmt.Println(my_name, data_chan, )
 }
