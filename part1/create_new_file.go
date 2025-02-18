@@ -20,5 +20,5 @@ func create_file(filename string) {
 
 func main() {
 
-create_file()
+create_file("myfile")
 }
