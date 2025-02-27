@@ -1,0 +1,47 @@
+package main 
+import (
+	"time"
+	"fmt"
+)
+
+type Person struct {
+	First string
+	Last string 
+	DOB time.Time
+}
+
+func NewPerson(first,  last string, year, month, day int) *Person{
+	return &Person{
+		First: first,
+		Last: last,
+		DOB: time.Date(year, time.Month(month), day, 0,0,0,0, time.Local),
+	}
+}
+func (p *Person) SayHello() string{
+	return fmt.Sprintf("Hello from %s", p.First)
+}
+
+func (p *Person) GetAge() {
+    age := time.Now().Year() - p.DOB.Year()
+    fmt.Println(age)
+}
+
+
+//func (p )
+
+func main() {
+	jane := Person{
+		First: "Janet",
+		Last: "April",
+		DOB: time.Date(1980, time.Month(1),1,0,0,0,0, time.Local),
+	}
+
+	John := NewPerson("John", "Axel", 1960, 4, 26)
+
+	fmt.Println(jane.SayHello())
+	fmt.Println(John.SayHello())
+	fmt.Println(jane)
+	fmt.Println(John)
+	John.GetAge()
+	jane.GetAge()
+}
