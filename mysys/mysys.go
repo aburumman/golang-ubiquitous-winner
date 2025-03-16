@@ -1,4 +1,4 @@
-package main  
+package mysys 
 
 import (
 
@@ -16,7 +16,9 @@ func main() {
 // 	return unix.Getuid()
 
 // }
-
+func GetHelloWorld()  string {
+	return "Hello, World"
+}
 func GetUserID() int {
     return os.Getuid()
 }
