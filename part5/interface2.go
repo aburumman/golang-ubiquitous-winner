@@ -17,7 +17,7 @@ type BasePerson struct {
 	LastName string
 }
 type Person interface {
-	GetName()
+	GetName() string
 }
 
 func (p *Employee) GetName() string {
@@ -29,12 +29,12 @@ func (p *Manager) GetName() string {
 }
 
 func SayHello(p Person) {
-	fmt.Println("Hello to you %s", p.GetName())
+	fmt.Println(p.GetName())
 }
 
 func main() {
 	tom := &Manager{
-		Employee{
+		Employee: Employee{
 			Salary:  6000,
 			LineManager: nil,
 		BasePerson: BasePerson{
@@ -43,7 +43,19 @@ func main() {
 		},
 	}}
 
-myp := BasePerson {
-	FirstName: "Tomiwa",
-	LastName: "Shikeni",
+	ken := &Employee {
+		BasePerson: BasePerson{
+			FirstName: "Kenneth",
+			LastName: "Werty",
+		},
+		Salary: 9_000,
+		LineManager: tom,
+	}
+	SayHello(ken)
+	SayHello(tom)
 }
+
+// 	myp := BasePerson {
+// 	FirstName: "Tomiwa",
+// 	LastName: "Shikeni",
+// }

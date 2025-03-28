@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"fmt"
 )
 
 func main() {
@@ -15,6 +16,10 @@ func main() {
      panic(write_file)
  }
   //somebyte := []byte("This is the content")
- 	read_file := os.ReadFile("testfile.txt", []byte(")
+ 	read_file, err := os.ReadFile("testfile.txt")
+	if err != nil {
+	panic(err)
+	}
+	fmt.Println(string(read_file))
 
 }
